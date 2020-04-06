@@ -2,9 +2,11 @@ const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 
 const searchButton = document.querySelector('#search');
 const answer = document.querySelector('#blank');
+//Searching for the 'section' 
+const sectionElement = document.querySelector('SECTION');
 
 
-function barAndDrinks(e) {
+function buzzRecipe(e) {
   let input = answer.value;
   searchDrinks(input);
   //answer.value = '';
@@ -19,10 +21,8 @@ async function searchDrinks(name) {
 }
 //displaying the items
 function displayTheInfo(drinks) {
-  console.log('Inside displayTheInfo:');
-  console.log(drinks);
-  const sectionElement = document.querySelector('SECTION');
-  console.log(sectionElement);
+  //console.log('Inside displayTheInfo:');
+  //console.log(drinks.length);
   //This will delete the previous search by deleting everything
   sectionElement.innerHTML = '';
 
@@ -35,33 +35,20 @@ function displayTheInfo(drinks) {
     name.innerHTML = drinks[i].strDrink;
     divDrink.append(name);
 
-    //Here create arrays for the ingredient list and measurements
-    // const ingredientList = getIngredients(drinks[i]);
-    // const measurementList = getMeasurments(drinks[i]);
-    // ingredientList.forEach((ingredient, idx) => {
-    //   console.log(`Ingredient ${idx + 1}: ${ingredient} Measurements ${idx + 1}: ${measurementList[idx]}`);
-
-    // })
-
-
-    // console.log('Instructions:', drinks[i].strInstructions);
-    // console.log('Image:', drinks[i].strDrinkThumb);
-
     //Creating the image element
     const imageSrc = document.createElement('img');
     imageSrc.setAttribute('src', drinks[i].strDrinkThumb + '/preview');
     imageSrc.setAttribute('alt', drinks[i].strDrink);
     divDrink.append(imageSrc);
 
-
     //Creating the button element
-    const choosenButton = document.createElement('button');
-    choosenButton.innerHTML = "This one";
-    choosenButton.setAttribute('id', `${drinks[i].idDrink}`);
-    choosenButton.addEventListener('click', function (e) {
-      choosenDrink(drinks[i]);
+    const chosenButton = document.createElement('button');
+    chosenButton.innerHTML = "This one";
+    chosenButton.setAttribute('id', `${drinks[i].idDrink}`);
+    chosenButton.addEventListener('click', function (e) {
+      chosenDrink(drinks[i]);
     })
-    divDrink.append(choosenButton);
+    divDrink.append(chosenButton);
 
     //Adding the divDrank to the section - this will appened to the page
     sectionElement.appendChild(divDrink);
@@ -95,9 +82,69 @@ function getMeasurments(drinkObject) {
 }
 
 
-function choosenDrink(drink) {
+function chosenDrink(drink) {
   console.log(drink);
-  alert(drink.strDrink);
+  sectionElement.innerHTML = '';
+
+  //create the name
+  const name = document.createElement('h4');
+  name.innerHTML = drink.strDrink;
+  sectionElement.append(name);
+
+
+  //Here create arrays for the ingredient list and measurements
+  const ingredientList = getIngredients(drink);
+  const measurementList = getMeasurments(drink);
+
+  displayList(ingredientList, 'Ingredients');
+  displayList(measurementList, 'Measurements');
+  // //Adding a Div for the ingredients
+  // const divIngredients = document.createElement('div');
+  // divIngredients.innerHTML = "Ingredients"
+  // const unOrderListElementI = document.createElement('ul');
+  // ingredientList.forEach(ingredient => {
+
+  //   const liIngredient = document.createElement('li');
+  //   liIngredient.innerHTML = ingredient;
+  //   unOrderListElementI.append(liIngredient);
+
+  // })
+  // divIngredients.append(unOrderListElementI);
+  // sectionElement.append(divIngredients);
+
+  // //Adding Div for the measurement
+  // const divMeasurements = document.createElement('div');
+  // divMeasurements.innerHTML = "Measurement";
+  // const unOrderListElementM = document.createElement('ul');
+  // measurementList.forEach(measurement => {
+
+  //   const liMeasurement = document.createElement('li');
+  //   liMeasurement.innerHTML = measurement;
+  //   unOrderListElementM.append(liMeasurement);
+
+  // })
+  // divMeasurements.append(unOrderListElementM);
+  // sectionElement.append(divMeasurements);
+
+
+  // console.log('Instructions:', drink.strInstructions);
+  // console.log('Image:', drink.strDrinkThumb);
 
 }
-searchButton.addEventListener('click', barAndDrinks);
+
+function displayList(array, title) {
+
+  const div = document.createElement('div');
+  div.innerHTML = title;
+  const unOrderList = document.createElement('ul');
+  array.forEach(item => {
+
+    const liElement = document.createElement('li');
+    liElement.innerHTML = item;
+    unOrderList.append(liElement);
+  })
+  div.append(unOrderList);
+  sectionElement.append(div);
+
+}
+searchButton.addEventListener('click', buzzRecipe);
