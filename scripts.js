@@ -6,8 +6,6 @@ const answer = document.querySelector('#blank');
 
 function barAndDrinks(e) {
   let input = answer.value;
-  //console.log('Inside barAndDrinks')
-  //console.log('I search for:', input)
   searchDrinks(input);
   //answer.value = '';
 
@@ -15,11 +13,8 @@ function barAndDrinks(e) {
 }
 
 async function searchDrinks(name) {
-  console.log('Inside searchDrinks');
   let searchDrink = name;
   const response = await axios.get(BASE_URL + searchDrink);
-  //console.log(response);
-  //console.log(response.data);
   displayTheInfo(response.data.drinks);
 }
 //displaying the items
@@ -32,9 +27,6 @@ function displayTheInfo(drinks) {
   sectionElement.innerHTML = '';
 
   for (let i = 0; i < drinks.length; i++) {
-    console.log('Name:', drinks[i].strDrink);
-    console.log('Ingredients:');
-
     //Creating DIV for each resulted drink
     const divDrink = document.createElement('DIV');
 
@@ -59,7 +51,6 @@ function displayTheInfo(drinks) {
     const imageSrc = document.createElement('img');
     imageSrc.setAttribute('src', drinks[i].strDrinkThumb + '/preview');
     imageSrc.setAttribute('alt', drinks[i].strDrink);
-    console.log(imageSrc);
     divDrink.append(imageSrc);
 
 
@@ -67,8 +58,9 @@ function displayTheInfo(drinks) {
     const choosenButton = document.createElement('button');
     choosenButton.innerHTML = "This one";
     choosenButton.setAttribute('id', `${drinks[i].idDrink}`);
-    //choosenButton.onclick = "choosenDrink('1')";
-    choosenButton.setAttribute('onclick', "choosenDrink('1')");
+    choosenButton.addEventListener('click', function (e) {
+      choosenDrink(drinks[i]);
+    })
     divDrink.append(choosenButton);
 
     //Adding the divDrank to the section - this will appened to the page
@@ -78,8 +70,6 @@ function displayTheInfo(drinks) {
 }
 //To get list of ingredients
 function getIngredients(drinkObject) {
-  console.log('Inside getIngredients:');
-  console.log(drinkObject);
   let ingredientList = [];
   let counter = 1;
   for (ingredient in drinkObject) {
@@ -93,8 +83,6 @@ function getIngredients(drinkObject) {
 
 //To get the list of Measurments:
 function getMeasurments(drinkObject) {
-  console.log('Inside getMeasurments:');
-  console.log(drinkObject);
   let measurementList = [];
   let counter = 1;
   for (measurement in drinkObject) {
@@ -107,8 +95,9 @@ function getMeasurments(drinkObject) {
 }
 
 
-function choosenDrink(data) {
-  alert("I was clicked");
-  console.log(data);
+function choosenDrink(drink) {
+  console.log(drink);
+  alert(drink.strDrink);
+
 }
 searchButton.addEventListener('click', barAndDrinks);
