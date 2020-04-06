@@ -8,6 +8,9 @@ function barAndDrinks(e) {
   //console.log('Inside barAndDrinks')
   //console.log('I search for:', input)
   searchDrinks(input);
+  //answer.value = '';
+
+
 }
 
 async function searchDrinks(name) {
@@ -24,6 +27,8 @@ function displayTheInfo(drinks) {
   console.log(drinks);
   const sectionElement = document.querySelector('SECTION');
   console.log(sectionElement);
+  //This will delete the previous search by deleting everything
+  sectionElement.innerHTML = '';
 
   for (let i = 0; i < drinks.length; i++) {
     console.log('Name:', drinks[i].strDrink);
@@ -49,10 +54,16 @@ function displayTheInfo(drinks) {
 
     const imageSrc = document.createElement('img');
     imageSrc.setAttribute('src', drinks[i].strDrinkThumb + '/preview');
+    imageSrc.setAttribute('alt', drinks[i].strDrink);
     console.log(imageSrc);
     divDrink.append(imageSrc);
+
+    const choosenButton = document.createElement('button');
+    choosenButton.innerHTML = "This one";
+    divDrink.append(choosenButton);
+
     //Adding the divDrank to the section - this will appened to the page
-    sectionElement.append(divDrink);
+    sectionElement.appendChild(divDrink);
 
   }
 }
