@@ -6,7 +6,7 @@ Buzz Receipt
 
 ## Project Description
 
-This project is going to a website/application where you can search you favorite drinks and leanr how to make it. Also if you are in the mood for a randome drink to make the website can generate the cocktail of the day so that you can make something new.
+This project is going to be a website/application where you can search your favorite drinks and learn how to make it. Also if you are in the mood for a random drink the website can generate the cocktail of the day so that you can make something new.
 
 ## API and Data Sample
 
@@ -84,15 +84,15 @@ This project is going to a website/application where you can search you favorite
 - Be able to use the appropiate API and use it correctly
 - Render data on page 
 - Allow user to search for there drink.
-- Be able randomonly suggest a cocktail to make.
+- Be able to randomonly suggest a cocktail to make.
 - Able to use flex to align the content correctly.
-- be able to reset the search if the users choose it to.
+- Be able to reset the search if the users chooses to.
 
 ## PostMVP 
 
-- find a way using anther API ( or not ) where to get all the bars near the location of the user
-- Implement this with list showing the user at all times at the bottom of the page
-- able to implement a link to map version of it
+- Find a way using another API ( or not ) where users can find nearby bars as per user location.
+- Implement this with a list showing the user at all times their location. It will be display at the bottom right corner.
+- Able to implement a link to map version of it.
 
 ## Project Schedule
 
