@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Buzz Receipt
+Buzz Recepi
 
 ## Project Description
 
