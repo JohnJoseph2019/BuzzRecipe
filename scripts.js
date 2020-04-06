@@ -6,21 +6,19 @@ const answer = document.querySelector('#blank');
 const sectionElement = document.querySelector('SECTION');
 
 
-function buzzRecipe(e) {
+function buzzRecipe() {
   let input = answer.value;
   searchDrinks(input);
   //answer.value = '';
-
-
 }
 
 async function searchDrinks(name) {
   let searchDrink = name;
   const response = await axios.get(BASE_URL + searchDrink);
-  displayTheInfo(response.data.drinks);
+  displayResults(response.data.drinks);
 }
 //displaying the items
-function displayTheInfo(drinks) {
+function displayResults(drinks) {
   //console.log('Inside displayTheInfo:');
   //console.log(drinks.length);
   //This will delete the previous search by deleting everything
@@ -46,7 +44,7 @@ function displayTheInfo(drinks) {
     chosenButton.innerHTML = "This one";
     chosenButton.setAttribute('id', `${drinks[i].idDrink}`);
     chosenButton.addEventListener('click', function (e) {
-      chosenDrink(drinks[i]);
+      displayDrinkInfo(drinks[i]);
     })
     divDrink.append(chosenButton);
 
@@ -82,7 +80,7 @@ function getMeasurments(drinkObject) {
 }
 
 
-function chosenDrink(drink) {
+function displayDrinkInfo(drink) {
   console.log(drink);
   sectionElement.innerHTML = '';
 
@@ -103,7 +101,7 @@ function chosenDrink(drink) {
   // console.log('Image:', drink.strDrinkThumb);
 
 }
-
+//This will display the list ingredients and measurment
 function displayList(array, title) {
 
   const div = document.createElement('div');
