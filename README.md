@@ -10,6 +10,8 @@ This project is going to a website/application where you can search you favorite
 
 ## API and Data Sample
 
+[Cock tail DB]('https://www.thecocktaildb.com/api.php')
+
 ```JSON 
 {
     "drinks": [
