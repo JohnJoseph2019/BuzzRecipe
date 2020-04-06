@@ -2,7 +2,7 @@
 
 ## Project Name
 
-Buzz Recepi
+Buzz recipe
 
 ## Project Description
 
