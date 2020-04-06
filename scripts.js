@@ -1,16 +1,23 @@
 const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 
-function searchDrinks(response) {
-  let drinks = response.data.drinks;
+const searchButton = document.querySelector('#search');
+const answer = document.querySelector('#blank');
+
+function barAndDrinks(e) {
+  let drink = answer.value;
   console.log('We in the searchDrinks function')
-  console.log(drinks.length);
+  console.log('I search for: ', drink)
+  searchDrinks(drink);
 }
 
-async function barAndDrinks() {
-  let searchDrink = 'bloody mary';
+async function searchDrinks(name) {
+  let searchDrink = name;
   const response = await axios.get(BASE_URL + searchDrink);
-  searchDrinks(response)
-  console.log(response);
+  console(response);
+  console(response.data);
+  console(response.data.drinks);
+  displayTheInfo(response.data.drinks);
 }
 
-barAndDrinks();
+
+searchButton.addEventListener('click', barAndDrinks);
