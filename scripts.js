@@ -22,22 +22,41 @@ async function searchDrinks(name) {
 function displayTheInfo(drinks) {
   console.log('Inside displayTheInfo:');
   console.log(drinks);
+  const sectionElement = document.querySelector('SECTION');
+  console.log(sectionElement);
 
   for (let i = 0; i < drinks.length; i++) {
     console.log('Name:', drinks[i].strDrink);
     console.log('Ingredients:');
+    const divDrink = document.createElement('DIV');
+
+    const name = document.createElement('h4');
+    name.innerHTML = drinks[i].strDrink;
+    divDrink.append(name);
+
+    //Here create arrays for the ingredient list and measurements
     const ingredientList = getIngredients(drinks[i]);
     const measurementList = getMeasurments(drinks[i]);
     ingredientList.forEach((ingredient, idx) => {
       console.log(`Ingredient ${idx + 1}: ${ingredient} Measurements ${idx + 1}: ${measurementList[idx]}`);
 
     })
+
+
     console.log('Instructions:', drinks[i].strInstructions);
+
     console.log('Image:', drinks[i].strDrinkThumb);
+
+    const imageSrc = document.createElement('img');
+    imageSrc.setAttribute('src', drinks[i].strDrinkThumb + '/preview');
+    console.log(imageSrc);
+    divDrink.append(imageSrc);
+    //Adding the divDrank to the section - this will appened to the page
+    sectionElement.append(divDrink);
 
   }
 }
-//To get list of inngredients
+//To get list of ingredients
 function getIngredients(drinkObject) {
   console.log('Inside getIngredients:');
   console.log(drinkObject);
