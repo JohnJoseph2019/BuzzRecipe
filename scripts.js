@@ -98,34 +98,6 @@ function chosenDrink(drink) {
 
   displayList(ingredientList, 'Ingredients');
   displayList(measurementList, 'Measurements');
-  // //Adding a Div for the ingredients
-  // const divIngredients = document.createElement('div');
-  // divIngredients.innerHTML = "Ingredients"
-  // const unOrderListElementI = document.createElement('ul');
-  // ingredientList.forEach(ingredient => {
-
-  //   const liIngredient = document.createElement('li');
-  //   liIngredient.innerHTML = ingredient;
-  //   unOrderListElementI.append(liIngredient);
-
-  // })
-  // divIngredients.append(unOrderListElementI);
-  // sectionElement.append(divIngredients);
-
-  // //Adding Div for the measurement
-  // const divMeasurements = document.createElement('div');
-  // divMeasurements.innerHTML = "Measurement";
-  // const unOrderListElementM = document.createElement('ul');
-  // measurementList.forEach(measurement => {
-
-  //   const liMeasurement = document.createElement('li');
-  //   liMeasurement.innerHTML = measurement;
-  //   unOrderListElementM.append(liMeasurement);
-
-  // })
-  // divMeasurements.append(unOrderListElementM);
-  // sectionElement.append(divMeasurements);
-
 
   // console.log('Instructions:', drink.strInstructions);
   // console.log('Image:', drink.strDrinkThumb);
