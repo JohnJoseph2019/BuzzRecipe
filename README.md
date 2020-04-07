@@ -98,11 +98,11 @@ This project is going to be a website/application where you can search your favo
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|April 6th| Project Planning/Project Aproval | Incomplete
-|April 7th| Build the HTML and Basic CSS | Incomplete
-|April 8th| Pseudocode / actual code of script with the API file day - 1  | Incomplete
-|April 9th| Code Javsscript and Incorporate the DOM functionailty. Finish the CSS file | Incomplete
-|April 10th| Present | Incomplete
+|April 6th| Project Planning/Project Aproval - HTML and Basic CSS | Incomplete
+|April 7th| Finish up with HTML and Basic CSS | Incomplete
+|April 8th| Coding of javascript/DOM to get and append data | Incomplete
+|April 9th| CSS Styling | Incomplete
+|April 10th| Presentation | Incomplete
 
 ## Priority Matrix
 
@@ -113,13 +113,13 @@ This project is going to be a website/application where you can search your favo
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | HTML Structure | L | 3hrs| 30min | N/A |
-| CSS Style - Basic | M | 3hrs| N/A | N/A |
-| DOM - Using Axios to acess to the API | H | 2hrs| N/A | N/A |
-| Javascript - Functions to get and manipulate the data to console| H | 4hrs| N/A | N/A |
-| DOM - Search button to display the results of the search drink| H | 3hrs| N/A | N/A |
-| DOM - Create a second button to each result item| H | 3hrs| N/A | N/A |
-| Javascript - Create functions for the result item selected | H | 3hrs| N/A | N/A |
-| API/DOM - Append the ingredients of the chosen item| H | 3hrs| N/A | N/A |
+| CSS Style - Basic | M | 3hrs| 30min | N/A |
+| DOM - Using Axios to acess to the API | H | 2hrs| 1hrs | N/A |
+| Javascript - Functions to get and manipulate the data to console| H | 4hrs| 4hrs | N/A |
+| DOM - Search button to display the results of the search drink| H | 3hrs| 1hr | N/A |
+| DOM - Create a second button to each result item| H | 3hrs| 2hr | N/A |
+| Javascript - Create functions for the result item selected | H | 3hrs| 2hr | N/A |
+| API/DOM - Append the ingredients of the chosen item| H | 3hrs| 3hr | N/A |
 | DOM - Add functonality to the cocktail of day button| H | 3hrs| N/A | N/A |
 | Javascript - display the cocktail of the day instructions| H | 3hrs| N/A | N/A |
 | CSS - add styling | H | 6hrs| N/A | N/A |
