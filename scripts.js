@@ -34,14 +34,12 @@ function displayResults(drinks) {
     divDrink.append(name);
 
     //Creating the image element
-    const imageSrc = document.createElement('img');
-    imageSrc.setAttribute('src', drinks[i].strDrinkThumb + '/preview');
-    imageSrc.setAttribute('alt', drinks[i].strDrink);
-    divDrink.append(imageSrc);
+    displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink)
+    divDrink.append(displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink));
 
     //Creating the button element
     const chosenButton = document.createElement('button');
-    chosenButton.innerHTML = "This one";
+    chosenButton.innerHTML = "Select Me";
     chosenButton.setAttribute('id', `${drinks[i].idDrink}`);
     chosenButton.addEventListener('click', function (e) {
       displayDrinkInfo(drinks[i]);
@@ -97,8 +95,12 @@ function displayDrinkInfo(drink) {
   displayList(ingredientList, 'Ingredients');
   displayList(measurementList, 'Measurements');
 
-  // console.log('Instructions:', drink.strInstructions);
-  // console.log('Image:', drink.strDrinkThumb);
+  //Instructions
+  const instructions = document.createElement('p');
+  instructions.innerHTML = drink.strInstructions;
+  sectionElement.append(instructions);
+
+  sectionElement.append(displayImage(drink.strDrinkThumb, drink.strDrink, '200px', '200px'));
 
 }
 //This will display the list ingredients and measurment
@@ -116,5 +118,18 @@ function displayList(array, title) {
   div.append(unOrderList);
   sectionElement.append(div);
 
+}
+
+/*This function will display the Image 
+ creates a Imgae element and adds all its properties to this element.
+ then it returns it.
+*/
+function displayImage(src, name, width, height) {
+  const imageSrc = document.createElement('IMG');
+  imageSrc.style.width = width;
+  imageSrc.style.height = height;
+  imageSrc.setAttribute('src', src + '/preview');
+  imageSrc.setAttribute('alt', name);
+  return imageSrc;
 }
 searchButton.addEventListener('click', buzzRecipe);
