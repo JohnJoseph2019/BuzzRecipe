@@ -3,6 +3,14 @@ body{
   text-align: center;
   background-color: cornsilk;
 }
+h1{
+  font-family: 'Lobster', cursive;
+  font-size: 3em;
+  letter-spacing: 1px;
+}
+#home-page-photo{
+  border: 1px solid black;
+}
 section{
   background-color: bisque;
 }
@@ -10,20 +18,48 @@ section{
   margin-top: 10px;
   width: 200px;
   height: 20px;
-  border: 1px solid gray;
   font-size: 15px;
-  border-radius: 2px;
-  
+  border: none;
+  border-bottom: 1px solid grey;
+  background-color: cornsilk;
+}
+#blank:focus{
+  background-color: rgba(43,29,107,.9);
+  color: white;
 }
 #search{
-  width: 70px;
+  width: auto;
   height: 25px;
   border-radius: 4px;
   font-size: 15px;
+
+  background: #ffffff;
+  border: 1px solid #494949;
+  transition: all 0.4s ease 0s;
+
 }
+
+#search:hover{
+  color: white;
+  background:rgb(43,29,107);
+  border-color: rgb(43,29,107);
+  transition: all 0.4s ease 0s;
+
+}
+
 #cocktail-of-the-day{
-  width: 100px;
+  width: auto;
   height: 25px;
   border-radius: 4px;
   font-size: 15px;
+
+  background: #ffffff;
+  border: 1px solid #494949;
+  transition: all 0.4s ease 0s;
+}
+#cocktail-of-the-day:hover{
+  color: white;
+  background:rgb(43,29,107);
+  border-color: rgb(43,29,107);
+  transition: all 0.4s ease 0s;
 }
