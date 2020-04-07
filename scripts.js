@@ -5,30 +5,34 @@ const RANDOM_URL = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
 const searchButton = document.querySelector('#search');
 const answer = document.querySelector('#blank');
 const cocktailButton = document.querySelector('#cocktail-of-the-day');
-//Searching for the 'section' 
+
+//Searching for the 'section' element
 const sectionElement = document.querySelector('SECTION');
 
 //Recevies the input and calls the searchDrink funtion on it
 function buzzRecipe() {
   let input = answer.value;
-  searchDrinks(input);
+  searchDrink(input);
   answer.value = '';
 }
 
-async function searchDrinks(name) {
+async function searchDrink(name) {
   try {
     let searchDrink = name;
     const response = await axios.get(BASE_URL + searchDrink);
-    displayResults(response.data.drinks);
+    displaySearchResults(response.data.drinks);
   }
   catch (error) {
     console.log(`This is the error: ${error}`)
   }
 }
+
 //displaying the items
-function displayResults(drinks) {
+function displaySearchResults(drinks) {
   //This will delete the previous search by deleting everything
   sectionElement.innerHTML = '';
+  //fix the header view of the page
+  fixHeaderview();
 
   for (let i = 0; i < drinks.length; i++) {
     //Creating DIV for each resulted drink
@@ -37,11 +41,11 @@ function displayResults(drinks) {
     //create the name
     const name = document.createElement('h4');
     name.innerHTML = drinks[i].strDrink;
+    console.log(name);
     divDrink.append(name);
 
-    //Creating the image element
-    displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink)
-    divDrink.append(displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink));
+    //Creating the image element and appending to the div
+    divDrink.append(displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink, '200px', '200px'));
 
     //Creating the button element
     const chosenButton = document.createElement('button');
@@ -52,11 +56,13 @@ function displayResults(drinks) {
     })
     divDrink.append(chosenButton);
 
+    setStyleToResultDiv();
     //Adding the divDrank to the section - this will appened to the page
     sectionElement.appendChild(divDrink);
 
   }
 }
+
 //To get list of ingredients
 function getIngredients(drinkObject) {
   let ingredientList = [];
@@ -83,8 +89,8 @@ function getMeasurments(drinkObject) {
   return measurementList;
 }
 
-
 function displayDrinkInfo(drink) {
+  fixHeaderview();
   sectionElement.innerHTML = '';
   //create the name
   const name = document.createElement('h4');
@@ -107,6 +113,7 @@ function displayDrinkInfo(drink) {
   sectionElement.append(displayImage(drink.strDrinkThumb, drink.strDrink, '200px', '200px'));
 
 }
+
 //This will display the list ingredients and measurment
 function displayList(array, title) {
 
@@ -132,7 +139,7 @@ function displayImage(src, name, width, height) {
   const imageSrc = document.createElement('IMG');
   imageSrc.style.width = width;
   imageSrc.style.height = height;
-  imageSrc.setAttribute('src', src + '/preview');
+  imageSrc.setAttribute('src', src);
   imageSrc.setAttribute('alt', name);
   return imageSrc;
 }
@@ -148,6 +155,21 @@ async function cocktail() {
     console.log(error);
   }
 }
+//Fix the body element to bring the content closer to the top Also alter h1 alittle to bring it closer to the top of the page
+function fixHeaderview() {
+  const body = document.querySelector('BODY');
+  // body.style.marginTop = '0';
+  // body.style.padding = '0';
+  console.log(body);
+  const h1 = document.querySelector('H1');
+  h1.style.margin = '0';
+  const hideImage = document.querySelector('#home-page-photo');
+  hideImage.style.display = 'none';
+}
+
+// function setStyleToResultDiv() {
+
+// }
 
 cocktailButton.addEventListener('click', cocktail)
 searchButton.addEventListener('click', buzzRecipe);
