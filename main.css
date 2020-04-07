@@ -16,7 +16,8 @@ section{
   /* background-color: bisque; */
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
+  
 }
 #blank{
   font-family: 'Lobster', cursive;
