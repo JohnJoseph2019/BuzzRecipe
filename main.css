@@ -1,7 +1,8 @@
 body{
-  padding-top: 100px;
+  padding-top: 20px;
   text-align: center;
-  background-color: cornsilk;font-family: 'Lobster', cursive;
+  background-color: cornsilk;
+  font-family: 'Lobster', cursive;
 }
 h1{
   font-family: 'Pacifico', cursive;
@@ -12,7 +13,10 @@ h1{
   border: 1px solid black;
 }
 section{
-  background-color: bisque;
+  /* background-color: bisque; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #blank{
   font-family: 'Lobster', cursive;
