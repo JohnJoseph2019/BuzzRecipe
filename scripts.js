@@ -47,17 +47,7 @@ function displaySearchResults(drinks) {
     divDrink.append(name);
 
     //Creating the image element and appending to the div
-    divDrink.append(displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink, '200px', '200px', drinks[i]));
-
-    //Creating the button element
-    // const chosenButton = document.createElement('button');
-    // chosenButton.innerHTML = "Select Me";
-    // chosenButton.setAttribute('id', `${drinks[i].idDrink}`);
-
-    // chosenButton.addEventListener('click', function (e) {
-    //   displayDrinkInfo(drinks[i]);
-    // })
-    // divDrink.append(chosenButton);
+    divDrink.append(displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink, '200px', '200px', drinks[i], 'imageResult'));
 
     //Adding the divDrank to the section - this will appened to the page
     sectionElement.appendChild(divDrink);
@@ -137,15 +127,19 @@ function displayList(array, title) {
  creates a Imgae element and adds all its properties to this element.
  then it returns it.
 */
-function displayImage(src, name, width, height, drinkObject) {
+function displayImage(src, name, width, height, drinkObject, classname = '') {
   const imageSrc = document.createElement('IMG');
   imageSrc.style.width = width;
   imageSrc.style.height = height;
   imageSrc.setAttribute('src', src);
   imageSrc.setAttribute('alt', name);
-  imageSrc.addEventListener('click', function (e) {
-    displayDrinkInfo(drinkObject);
-  })
+  if (classname !== '') {
+    imageSrc.setAttribute('class', classname);
+    //Adding event listener to for this image
+    imageSrc.addEventListener('click', function (e) {
+      displayDrinkInfo(drinkObject);
+    })
+  }
   return imageSrc;
 }
 
