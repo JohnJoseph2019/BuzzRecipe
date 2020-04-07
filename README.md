@@ -112,15 +112,18 @@ This project is going to be a website/application where you can search your favo
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML Structure | L | 3hrs| N/A | N/A |
-| CSS Style - P1 - Structure | M | 3hrs| N/A | N/A |
-| Button/search create the layout| H | 4hrs| N/A | N/A |
-| API acessing data/ Rendering data| H | 3hrs| N/A | N/A |
-| Rendering API data| H | 3hrs| N/A | N/A |
-| DOM - Data appending elements to the page| H | 3hrs| N/A | N/A |
-| API/DOM - Appending data with DOM elements| H | 3hrs| N/A | N/A |
-| Finish UP CSS and the displaying| H | 6hrs| N/A | N/A |
-| Total | H | 28hrs| N/A | N/A |
+| HTML Structure | L | 3hrs| 30min | N/A |
+| CSS Style - Basic | M | 3hrs| N/A | N/A |
+| DOM - Using Axios to acess to the API | H | 2hrs| N/A | N/A |
+| Javascript - Functions to get and manipulate the data to console| H | 4hrs| N/A | N/A |
+| DOM - Search button to display the results of the search drink| H | 3hrs| N/A | N/A |
+| DOM - Create a second button to each result item| H | 3hrs| N/A | N/A |
+| Javascript - Create functions for the result item selected | H | 3hrs| N/A | N/A |
+| API/DOM - Append the ingredients of the chosen item| H | 3hrs| N/A | N/A |
+| DOM - Add functonality to the cocktail of day button| H | 3hrs| N/A | N/A |
+| Javascript - display the cocktail of the day instructions| H | 3hrs| N/A | N/A |
+| CSS - add styling | H | 6hrs| N/A | N/A |
+| Total | H | 33hrs| 30min | 30min |
 
 ## Code Snippet
 
