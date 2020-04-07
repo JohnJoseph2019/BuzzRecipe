@@ -1,6 +1,29 @@
 body{
+  padding-top: 100px;
   text-align: center;
+  background-color: cornsilk;
 }
 section{
   background-color: bisque;
+}
+#blank{
+  margin-top: 10px;
+  width: 200px;
+  height: 20px;
+  border: 1px solid gray;
+  font-size: 15px;
+  border-radius: 2px;
+  
+}
+#search{
+  width: 70px;
+  height: 25px;
+  border-radius: 4px;
+  font-size: 15px;
+}
+#cocktail-of-the-day{
+  width: 100px;
+  height: 25px;
+  border-radius: 4px;
+  font-size: 15px;
 }
