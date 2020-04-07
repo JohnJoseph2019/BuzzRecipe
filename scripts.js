@@ -85,13 +85,7 @@ function getMeasurments(drinkObject) {
 
 
 function displayDrinkInfo(drink) {
-  console.log('in Display Drink Info')
-  console.log(drink);
-  console.log(drink.length);
   sectionElement.innerHTML = '';
-
-  console.log(drink.strDrink);
-
   //create the name
   const name = document.createElement('h4');
   name.innerHTML = drink.strDrink;
@@ -145,7 +139,6 @@ function displayImage(src, name, width, height) {
 
 //Cocktail of the day function
 async function cocktail() {
-
   try {
     let cocktail = await axios.get(RANDOM_URL);
     console.log(cocktail);
