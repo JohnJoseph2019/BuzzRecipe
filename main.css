@@ -73,3 +73,6 @@ section{
   border-color: rgb(43,29,107);
   transition: all 0.4s ease 0s;
 }
+.imageResult:hover{
+  opacity: .5;;
+}
