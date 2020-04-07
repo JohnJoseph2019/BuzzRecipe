@@ -1,26 +1,32 @@
 const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
+const RANDOM_URL = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
 
+//GLOBAL VARIABLES
 const searchButton = document.querySelector('#search');
 const answer = document.querySelector('#blank');
+const cocktailButton = document.querySelector('#cocktail-of-the-day');
 //Searching for the 'section' 
 const sectionElement = document.querySelector('SECTION');
 
-
+//Recevies the input and calls the searchDrink funtion on it
 function buzzRecipe() {
   let input = answer.value;
   searchDrinks(input);
-  //answer.value = '';
+  answer.value = '';
 }
 
 async function searchDrinks(name) {
-  let searchDrink = name;
-  const response = await axios.get(BASE_URL + searchDrink);
-  displayResults(response.data.drinks);
+  try {
+    let searchDrink = name;
+    const response = await axios.get(BASE_URL + searchDrink);
+    displayResults(response.data.drinks);
+  }
+  catch (error) {
+    console.log(`This is the error: ${error}`)
+  }
 }
 //displaying the items
 function displayResults(drinks) {
-  //console.log('Inside displayTheInfo:');
-  //console.log(drinks.length);
   //This will delete the previous search by deleting everything
   sectionElement.innerHTML = '';
 
@@ -79,8 +85,12 @@ function getMeasurments(drinkObject) {
 
 
 function displayDrinkInfo(drink) {
+  console.log('in Display Drink Info')
   console.log(drink);
+  console.log(drink.length);
   sectionElement.innerHTML = '';
+
+  console.log(drink.strDrink);
 
   //create the name
   const name = document.createElement('h4');
@@ -132,4 +142,20 @@ function displayImage(src, name, width, height) {
   imageSrc.setAttribute('alt', name);
   return imageSrc;
 }
+
+//Cocktail of the day function
+async function cocktail() {
+
+  try {
+    let cocktail = await axios.get(RANDOM_URL);
+    console.log(cocktail);
+    displayDrinkInfo(cocktail.data.drinks[0]);
+  }
+  catch (error) {
+    console.log(error);
+  }
+}
+
+cocktailButton.addEventListener('click', cocktail)
 searchButton.addEventListener('click', buzzRecipe);
+
