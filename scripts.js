@@ -29,10 +29,11 @@ async function searchDrink(name) {
 
 //displaying the items
 function displaySearchResults(drinks) {
+  //fix the header view of the page so the content can be see closer to the top of the page
+  fixHeaderview();
   //This will delete the previous search by deleting everything
   sectionElement.innerHTML = '';
-  //fix the header view of the page
-  fixHeaderview();
+  sectionElement.setAttribute('class', 'section-search-result');
 
   for (let i = 0; i < drinks.length; i++) {
     //Creating DIV for each resulted drink
@@ -82,35 +83,50 @@ function getMeasurments(drinkObject) {
 }
 
 function displayDrinkInfo(drink) {
+  //This is to fix the header view bringing the content to the top of the page
   fixHeaderview();
   sectionElement.innerHTML = '';
-  //create the name
+  sectionElement.setAttribute('class', 'section-chosen-cocktail');
+
+  //create the name and added to the section element
   const name = document.createElement('h4');
   name.innerHTML = drink.strDrink;
   sectionElement.append(name);
 
+  //Making this div inside the section element to align this row in column box
+  const div = document.createElement('DIV');
+  div.style.display = 'flex';
+
+  //Adding the image
+  div.append(displayImage(drink.strDrinkThumb, drink.strDrink, '350px', '375px'));
 
   //Here create arrays for the ingredient list and measurements
   const ingredientList = getIngredients(drink);
   const measurementList = getMeasurments(drink);
 
-  displayList(ingredientList, 'Ingredients');
-  displayList(measurementList, 'Measurements');
+  const innerDiv = document.createElement('div');
+  const listDiv = document.createElement('div');
+  listDiv.style.display = 'flex';
+  listDiv.style.justifyContent = 'center';
+  listDiv.append(displayList(ingredientList, 'Ingredients'));
+  listDiv.append(displayList(measurementList, 'Measurements'));
+  innerDiv.append(listDiv);
 
   //Instructions
   const instructions = document.createElement('p');
   instructions.innerHTML = drink.strInstructions;
-  sectionElement.append(instructions);
+  innerDiv.append(instructions);
 
-  sectionElement.append(displayImage(drink.strDrinkThumb, drink.strDrink, '200px', '200px'));
+  div.append(innerDiv);
+  sectionElement.append(div);
 
 }
 
 //This will display the list ingredients and measurment
 function displayList(array, title) {
 
-  const div = document.createElement('div');
-  div.innerHTML = title;
+  // const div = document.createElement('div');
+  // div.innerHTML = title;
   const unOrderList = document.createElement('ul');
   array.forEach(item => {
 
@@ -118,8 +134,9 @@ function displayList(array, title) {
     liElement.innerHTML = item;
     unOrderList.append(liElement);
   })
-  div.append(unOrderList);
-  sectionElement.append(div);
+  // div.append(unOrderList);
+  return unOrderList;
+  //sectionElement.append(div);
 
 }
 
