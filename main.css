@@ -58,7 +58,7 @@ h1{
   color: white;
   background: deeppink;
   border-color: deeppink;
-  transition: all 0.4s ease 0s;
+  transition: all 0.5s ease 0s;
   animation: shake 0.1s;
 
 }
@@ -78,7 +78,7 @@ h1{
   color: white;
   background:deeppink;
   border-color: deeppink;
-  transition: all .7s ease 0s;
+  transition: all .5s ease 0s;
   animation: shake 0.1s;
 }
 .imageResult:hover{
@@ -124,4 +124,35 @@ h4{
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+/* ----------- iPhone X ----------- */
+/* Took this data from 
+URL: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+*/
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px)
+  and (-webkit-min-device-pixel-ratio: 3) { 
+    body{
+      background-color: aquamarine;
+      text-align: center;
+    }
+    h1{
+      font-size: 2em;
+    }
+    #home-page-photo{
+      height: 175px;
+      width: 300px;
+    }
+    #blank{
+      font-size: 10px;
+    }
+    #search{
+      margin-left: 3px;
+    }
+    #cocktail-of-the-day{
+      margin-top: 8px;
+    }
+
 }
