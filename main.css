@@ -1,5 +1,6 @@
 body{
   padding-top: 20px;
+  margin-top: 0;
   text-align: center;
   background-color: cornsilk;
   font-family: 'Lobster', cursive;
@@ -12,12 +13,17 @@ h1{
 #home-page-photo{
   border: 1px solid black;
 }
-section{
-  /* background-color: bisque; */
+.section-search-result{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  
+}
+.sectin-chosen-cocktail{
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* flex-direction: column; */
+  /* justify-content: space-evenly; */
+  color: red;
 }
 #blank{
   font-family: 'Lobster', cursive;
@@ -75,4 +81,7 @@ section{
 }
 .imageResult:hover{
   opacity: .5;;
+}
+ul{
+  list-style-type: none;
 }
