@@ -49,7 +49,7 @@ function displaySearchResults(drinks) {
     divDrink.append(name);
 
     //Creating the image element and appending to the div
-    divDrink.append(displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink, '200px', '200px', drinks[i], 'imageResult'));
+    divDrink.append(displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink, drinks[i], 'imageResult'));
 
     //Adding the divDrank to the section - this will appened to the page
     sectionElement.appendChild(divDrink);
@@ -99,10 +99,12 @@ function displayDrinkInfo(drink) {
   const div = document.createElement('DIV');
   div.setAttribute('id', 'section-div');
   div.style.display = 'flex';
+  div.style.alignItems = 'center';
   div.style.justifyContent = 'center';
 
+
   //Adding the image
-  div.append(displayImage(drink.strDrinkThumb, drink.strDrink, '350px', '375px'));
+  div.append(displayImage(drink.strDrinkThumb, drink.strDrink));
 
   //Here create arrays for the ingredient list and measurements
   const ingredientList = getIngredients(drink);
@@ -164,10 +166,8 @@ function displayList(array, title) {
  creates a Imgae element and adds all its properties to this element.
  then it returns it.
 */
-function displayImage(src, name, width, height, drinkObject, classname = '') {
+function displayImage(src, name, drinkObject, classname = '') {
   const imageSrc = document.createElement('IMG');
-  imageSrc.style.width = width;
-  imageSrc.style.height = height;
   imageSrc.setAttribute('src', src);
   imageSrc.setAttribute('alt', name);
   if (classname !== '') {
@@ -176,6 +176,8 @@ function displayImage(src, name, width, height, drinkObject, classname = '') {
     imageSrc.addEventListener('click', function (e) {
       displayDrinkInfo(drinkObject);
     })
+  } else {
+    imageSrc.setAttribute('class', 'static-photo');
   }
   return imageSrc;
 }
