@@ -43,6 +43,7 @@ function displaySearchResults(drinks) {
 
     //create the name
     const name = document.createElement('h3');
+    name.style.fontFamily = 'Girassol, cursive';
     name.innerHTML = drinks[i].strDrink;
     console.log(name);
     divDrink.append(name);
@@ -90,6 +91,7 @@ function displayDrinkInfo(drink) {
 
   //create the name and added to the section element
   const name = document.createElement('h2');
+  name.style.fontFamily = 'Girassol, cursive';
   name.innerHTML = drink.strDrink;
   sectionElement.append(name);
 
@@ -107,7 +109,8 @@ function displayDrinkInfo(drink) {
   const measurementList = getMeasurments(drink);
 
   const innerDiv = document.createElement('div');
-  const listTile = document.createElement('h3');
+  const listTile = document.createElement('h4');
+  listTile.style.fontFamily = 'Girassol, cursive';
   listTile.style.textDecoration = 'underline';
   listTile.innerHTML = 'Ingredients';
   innerDiv.append(listTile);
@@ -127,8 +130,10 @@ function displayDrinkInfo(drink) {
   innerDiv.append(listDiv);
 
   //Instructions
-  const instTitle = document.createElement('h3');
+  const instTitle = document.createElement('h4');
+  instTitle.style.fontFamily = 'Girassol, cursive';
   instTitle.style.textDecoration = 'underline';
+
   instTitle.innerHTML = 'Instructions:';
   innerDiv.append(instTitle);
 
