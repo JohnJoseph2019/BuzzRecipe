@@ -19,11 +19,9 @@ h1{
   justify-content: space-evenly;
 }
 .sectin-chosen-cocktail{
-  /* display: flex; */
-  /* flex-wrap: wrap; */
-  /* flex-direction: column; */
-  /* justify-content: space-evenly; */
-  color: red;
+  display: flex;
+  text-align: center;
+  justify-content: end;
 }
 #blank{
   font-family: 'Lobster', cursive;
@@ -80,8 +78,20 @@ h1{
   transition: all 0.4s ease 0s;
 }
 .imageResult:hover{
-  opacity: .5;;
+  opacity: .5;
 }
 ul{
   list-style-type: none;
+  text-align: left;
+}
+p{
+  display: flex;
+  justify-content: center;
+  /* width: 200px;
+  padding: 50px; */
+  width: 300px;
+  margin: 20px;
+  padding-left: 20px;
+  text-align: left;
+
 }

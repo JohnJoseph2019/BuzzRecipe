@@ -95,7 +95,9 @@ function displayDrinkInfo(drink) {
 
   //Making this div inside the section element to align this row in column box
   const div = document.createElement('DIV');
+  div.setAttribute('id', 'section-div');
   div.style.display = 'flex';
+  div.style.justifyContent = 'center';
 
   //Adding the image
   div.append(displayImage(drink.strDrinkThumb, drink.strDrink, '350px', '375px'));
@@ -105,9 +107,16 @@ function displayDrinkInfo(drink) {
   const measurementList = getMeasurments(drink);
 
   const innerDiv = document.createElement('div');
+  innerDiv.style.display = 'flex';
+  innerDiv.style.flexDirection = 'column';
+  innerDiv.style.justifyContent = 'center';
+
+  innerDiv.setAttribute('id', 'innerDiv');
   const listDiv = document.createElement('div');
   listDiv.style.display = 'flex';
+  listDiv.setAttribute('id', 'listDiv');
   listDiv.style.justifyContent = 'center';
+
   listDiv.append(displayList(ingredientList, 'Ingredients'));
   listDiv.append(displayList(measurementList, 'Measurements'));
   innerDiv.append(listDiv);
@@ -125,19 +134,15 @@ function displayDrinkInfo(drink) {
 //This will display the list ingredients and measurment
 function displayList(array, title) {
 
-  // const div = document.createElement('div');
-  // div.innerHTML = title;
   const unOrderList = document.createElement('ul');
   array.forEach(item => {
 
     const liElement = document.createElement('li');
     liElement.innerHTML = item;
+    liElement.setAttribute('id', title);
     unOrderList.append(liElement);
   })
-  // div.append(unOrderList);
   return unOrderList;
-  //sectionElement.append(div);
-
 }
 
 /*This function will display the Image 
