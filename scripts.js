@@ -42,7 +42,7 @@ function displaySearchResults(drinks) {
     divDrink.style.flexDirection = 'column';
 
     //create the name
-    const name = document.createElement('h4');
+    const name = document.createElement('h3');
     name.innerHTML = drinks[i].strDrink;
     console.log(name);
     divDrink.append(name);
@@ -89,7 +89,7 @@ function displayDrinkInfo(drink) {
   sectionElement.setAttribute('class', 'section-chosen-cocktail');
 
   //create the name and added to the section element
-  const name = document.createElement('h4');
+  const name = document.createElement('h2');
   name.innerHTML = drink.strDrink;
   sectionElement.append(name);
 
@@ -107,6 +107,11 @@ function displayDrinkInfo(drink) {
   const measurementList = getMeasurments(drink);
 
   const innerDiv = document.createElement('div');
+  const listTile = document.createElement('h3');
+  listTile.style.textDecoration = 'underline';
+  listTile.innerHTML = 'Ingredients';
+  innerDiv.append(listTile);
+
   innerDiv.style.display = 'flex';
   innerDiv.style.flexDirection = 'column';
   innerDiv.style.justifyContent = 'center';
@@ -122,6 +127,11 @@ function displayDrinkInfo(drink) {
   innerDiv.append(listDiv);
 
   //Instructions
+  const instTitle = document.createElement('h3');
+  instTitle.style.textDecoration = 'underline';
+  instTitle.innerHTML = 'Instructions:';
+  innerDiv.append(instTitle);
+
   const instructions = document.createElement('p');
   instructions.innerHTML = drink.strInstructions;
   innerDiv.append(instructions);
