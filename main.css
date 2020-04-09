@@ -161,9 +161,15 @@ URL: https://www.w3schools.com/howto/howto_css_shake_image.asp
     } 
     #search{
       margin-left: 3px;
+      background-color: whitesmoke;
+      transition: none;
+      animation: none;      
     }  
     #cocktail-of-the-day{
       margin-top: 8px;
+      background-color: whitesmoke;
+      transition: none;
+      animation: none;      
     }             
     #section-div{
       flex-direction: column;
