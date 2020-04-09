@@ -126,7 +126,7 @@ This project is going to be a website/application where you can search your favo
 | CSS Styling - Search Result| H | 3hrs| 3hrs | N/A |
 | CSS Styling - Drink Result | H | 3hrs| 3hrs | N/A |
 | CSS Styling - Button Design | H | 3hrs| 3hrs | N/A |
-| Total | H | 42hrs| 1hr | N/A | 
+| Total | H | 42hrs| 35hrs | N/A | 
 
 ## Code Snippet
 
