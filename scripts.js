@@ -273,5 +273,11 @@ function fixHeaderview() {
   hideImage.style.display = 'none';
 }
 cocktailButton.addEventListener('click', cocktail);
-searchButton.addEventListener('click', buzzRecipe);
 
+searchButton.addEventListener('click', buzzRecipe);
+//this event listener is add to the input tag which check if 'Enter' key was press then call buzzRecipe
+answer.addEventListener('keyup', function (event) {
+  if (event.keyCode === 13) {
+    buzzRecipe();
+  }
+})
