@@ -30,7 +30,7 @@ async function searchDrink(name) {
     sectionElement.style.display = 'flex';
     sectionElement.style.flexDirection = 'column';
     sectionElement.style.alignItems = 'center';
-    sectionElement.style.marginTop = '20px';
+    sectionElement.style.marginTop = '30px';
     //Creating the Image tag with some style
     const errorImage = document.createElement('img');
     errorImage.setAttribute('src', 'images/errorImage.jpg')
