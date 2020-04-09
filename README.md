@@ -98,7 +98,8 @@ This project is going to be a website/application where you can search your favo
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|April 6th| Project Planning/Project Aproval - HTML and Basic CSS | Incomplete
+|April 6th| Project Planning/Project Aproval - HTML and Basic CSS | 
+Complete
 |April 7th| Finish up with HTML and Basic CSS | Incomplete
 |April 8th| Coding of javascript/DOM to get and append data | Incomplete
 |April 9th| CSS Styling | Incomplete
