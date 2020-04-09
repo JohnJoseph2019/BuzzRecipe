@@ -143,47 +143,8 @@ URL: https://www.w3schools.com/howto/howto_css_shake_image.asp
   100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
 /* ----------- iPhone X ----------- */
-/* Took this data from 
-URL: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
-*/
-/* Portrait and Landscape */
-/* @media only screen 
-  and (min-device-width: 375px) 
-  and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 3){ 
-    body{
-      background-color: aquamarine;
-      text-align: center;
-    }
-    h1{
-      font-size: 2em;
-    }
-    #home-page-photo{
-      height: 175px;
-      width: 300px;
-    }
-    #blank{
-      font-size: 10px;
-    }
-    #search{
-      margin-left: 3px;
-    }
-    #cocktail-of-the-day{
-      margin-top: 8px;
-    }
-    #section-div{
-      flex-direction: column;
-    }
-    .static-photo{
-      height: 200px;
-      width: 200px;
-    }
-
-} */
-
-
 /* This is for the Iphone X */
-@media (min-width: 375px) and (max-width: 812px){
+@media screen and (min-width: 375px) and (max-width: 812px){
     body{
       background-color: aquamarine;
       text-align: center;
