@@ -37,10 +37,10 @@ async function searchDrink(name) {
   }
 }
 /* errorMessage
-* Here it will take the input drink search and use this to start the API call to get that data
-* if something goes wrong through the process of getting the data and
-* rendering tot the screen it will post catch error message to the console
-* as well as to the screen for the user can see.
+* This function will display an Error message when the search came back unsuccessful.
+* Will create to tag elements a H2 and IMG.
+* H2 - will display the error message
+* IMG - wil display and image
 */
 function errorMessage() {
   //clearing the section element tag
