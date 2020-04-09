@@ -63,7 +63,11 @@ function errorMessage() {
   errorh2.innerHTML = 'Sorry! It seems we do not have that cocktail. Try another search';
   sectionElement.append(errorh2);
 }
-
+/* displaySearchResults(drinks)
+* This function will display all the results that the API has on the drink the user search for
+* params: drinks - this is the array of all results
+* It will traverse to the array and display the name of the drink and the image of it
+*/
 //displaying the items
 function displaySearchResults(drinks) {
   //fix the header view of the page so the content can be see closer to the top of the page
@@ -71,27 +75,24 @@ function displaySearchResults(drinks) {
   //This will delete the previous search by deleting everything
   sectionElement.innerHTML = '';
   sectionElement.removeAttribute('style');
-
-  //sectionElement.setAttribute('class', 'section-search-result');
   sectionElement.className = 'section-search-result';
 
   for (let i = 0; i < drinks.length; i++) {
-    //Creating DIV for each resulted drink
+    //Creating DIV for each resulted drink and image
     const divDrink = document.createElement('DIV');
     divDrink.style.display = 'flex';
     divDrink.style.flexDirection = 'column';
 
-    //create the name
+    //create h3 tag for the title of the drink
     const name = document.createElement('h3');
     name.style.fontFamily = 'Girassol, cursive';
     name.innerHTML = drinks[i].strDrink;
-    console.log(name);
     divDrink.append(name);
 
     //Creating the image element and appending to the div
     divDrink.append(displayImage(drinks[i].strDrinkThumb, drinks[i].strDrink, drinks[i], 'imageResult'));
 
-    //Adding the divDrank to the section - this will appened to the page
+    //Adding the divDrank to the section - this will append it to the page
     sectionElement.appendChild(divDrink);
 
   }
