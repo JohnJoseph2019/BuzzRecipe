@@ -128,65 +128,78 @@ function getMeasurments(drinkObject) {
   }
   return measurementList;
 }
-
+/* displayDrinkInfo(drink)
+* This will display the chosen drinks info
+* params = drink - this is the chose drink's object
+* Here it will use DOM/Javascript to display correctly the info like:
+* title / image / ingredients / measurements / instructions
+*/
 function displayDrinkInfo(drink) {
   //This is to fix the header view bringing the content to the top of the page
   fixHeaderview();
   sectionElement.innerHTML = '';
   sectionElement.setAttribute('class', 'section-chosen-cocktail');
 
-  //create the name and added to the section element
+  //Creating H2 tag for the title
   const name = document.createElement('h2');
   name.style.fontFamily = 'Girassol, cursive';
   name.innerHTML = drink.strDrink;
   sectionElement.append(name);
 
-  //Making this div inside the section element to align this row in column box
+  //Creating a div that will have the image/ingredient/Measurements/instructions as a child
   const div = document.createElement('DIV');
   div.setAttribute('id', 'section-div');
   div.style.display = 'flex';
   div.style.alignItems = 'center';
   div.style.justifyContent = 'center';
-  //Adding the image
+
+
+  //Adding the image to the div
   div.append(displayImage(drink.strDrinkThumb, drink.strDrink));
-  //Here create arrays for the ingredient list and measurements
+
+  //Here retrieving ingredients and measurments as an array
   const ingredientList = getIngredients(drink);
   const measurementList = getMeasurments(drink);
 
+  //Creating innderDiv to have a section just for ingredients/measurments/instructions
   const innerDiv = document.createElement('div');
+  innerDiv.style.display = 'flex';
+  innerDiv.style.flexDirection = 'column';
+  innerDiv.style.justifyContent = 'center';
+  innerDiv.setAttribute('id', 'innerDiv');
+
+  //Creating listTile tag for a title
   const listTile = document.createElement('h4');
   listTile.style.fontFamily = 'Girassol, cursive';
   listTile.style.textDecoration = 'underline';
   listTile.innerHTML = 'Ingredients';
   innerDiv.append(listTile);
 
-  innerDiv.style.display = 'flex';
-  innerDiv.style.flexDirection = 'column';
-  innerDiv.style.justifyContent = 'center';
-
-  innerDiv.setAttribute('id', 'innerDiv');
+  //Creating a lisDiv to box out ingredients / measurements
   const listDiv = document.createElement('div');
-  listDiv.style.display = 'flex';
   listDiv.setAttribute('id', 'listDiv');
+  listDiv.style.display = 'flex';
   listDiv.style.justifyContent = 'center';
 
   listDiv.append(displayList(ingredientList, 'Ingredients'));
   listDiv.append(displayList(measurementList, 'Measurements'));
   innerDiv.append(listDiv);
 
-  //Instructions
+  //Creating instTitle for the title of instuctions
   const instTitle = document.createElement('h4');
   instTitle.style.fontFamily = 'Girassol, cursive';
   instTitle.style.textDecoration = 'underline';
-
   instTitle.innerHTML = 'Instructions:';
   innerDiv.append(instTitle);
 
+  //Creating P tag for the instruction info
   const instructions = document.createElement('p');
   instructions.innerHTML = drink.strInstructions;
   innerDiv.append(instructions);
 
+  //innerDiv to the div tag
   div.append(innerDiv);
+  //div will go to the section tag
   sectionElement.append(div);
 
 }
