@@ -233,6 +233,7 @@ function displayImage(src, name, drinkObject, classname = '') {
   const imageSrc = document.createElement('IMG');
   imageSrc.setAttribute('src', src);
   imageSrc.setAttribute('alt', name);
+  imageSrc.style.borderRadius = '4px';
   if (classname !== '') {
     imageSrc.setAttribute('class', classname);
     //Adding event listener to for this image
