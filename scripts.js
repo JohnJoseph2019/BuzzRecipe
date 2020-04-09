@@ -68,7 +68,6 @@ function errorMessage() {
 * params: drinks - this is the array of all results
 * It will traverse to the array and display the name of the drink and the image of it
 */
-//displaying the items
 function displaySearchResults(drinks) {
   //fix the header view of the page so the content can be see closer to the top of the page
   fixHeaderview();
@@ -97,8 +96,11 @@ function displaySearchResults(drinks) {
 
   }
 }
-
-//To get list of ingredients
+/* getIngredients(drinkObject)
+* This function will return an array of ingredients
+* params = drinkObject - this is the object of the chosen drink
+* traverse to the object for properties that have ingredients and push that to an array
+*/
 function getIngredients(drinkObject) {
   let ingredientList = [];
   let counter = 1;
@@ -110,8 +112,11 @@ function getIngredients(drinkObject) {
   }
   return ingredientList;
 }
-
-//To get the list of Measurments:
+/* getMeasurments(drinkObject)
+* This function will return an array of measurement
+* params = drinkObject - this is the object of the chosen drink
+* traverse to the object for properties that have measurements and push that to an array
+*/
 function getMeasurments(drinkObject) {
   let measurementList = [];
   let counter = 1;
