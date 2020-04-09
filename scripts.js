@@ -203,8 +203,11 @@ function displayDrinkInfo(drink) {
   sectionElement.append(div);
 
 }
-
-//This will display the list ingredients and measurment
+/* displayList(array, title)
+* This will turn the array argument into an underlist tag.
+* return the ul tag element with the array elements as li
+* params = array - array for what to display | title - the name of the array list for id attribute
+*/
 function displayList(array, title) {
 
   const unOrderList = document.createElement('ul');
