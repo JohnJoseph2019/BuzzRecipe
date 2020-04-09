@@ -260,7 +260,10 @@ async function cocktail() {
     console.log(error);
   }
 }
-//Fix the body element to bring the content closer to the top Also alter h1 alittle to bring it closer to the top of the page
+/* fixHeaderview()
+* This function will basically just fix the top view of the page when
+* it is not at the homepage
+*/
 function fixHeaderview() {
   const body = document.querySelector('BODY');
   console.log(body);
