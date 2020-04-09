@@ -18,7 +18,12 @@ function buzzRecipe() {
   searchDrink(input);
   answer.value = '';
 }
-
+/* async function searchDrink
+* Here it will take the input drink search and use this to start the API call to get that data
+* if something goes wrong through the process of getting the data and 
+* rendering tot the screen it will post catch error message to the console 
+* as well as to the screen for the user can see.
+*/
 async function searchDrink(name) {
   try {
     let searchDrink = name;
@@ -26,28 +31,37 @@ async function searchDrink(name) {
     displaySearchResults(response.data.drinks);
   }
   catch (error) {
-
-    //clearing the section element tag
-    sectionElement.innerHTML = '';
-    //styling the section elemetn tag
-    sectionElement.style.display = 'flex';
-    sectionElement.style.flexDirection = 'column';
-    sectionElement.style.alignItems = 'center';
-    sectionElement.style.marginTop = '30px';
-    //Creating the Image tag with some style
-    const errorImage = document.createElement('img');
-    errorImage.setAttribute('src', 'images/errorImage.jpg')
-    errorImage.style.width = '300px';
-    errorImage.style.height = '180px;'
-    errorImage.style.border = '1px solid black';
-    sectionElement.append(errorImage);
-    //Creating the error message to be appended to the screen
-    const errorh2 = document.createElement('h2');
-    errorh2.style.width = "200px";
-    errorh2.innerHTML = 'Sorry! It seems we do not have that cocktail. Try another search';
-    sectionElement.append(errorh2);
+    //Calling this function to append the error
+    errorMessage();
     console.log(`${error}`)
   }
+}
+/* errorMessage
+* Here it will take the input drink search and use this to start the API call to get that data
+* if something goes wrong through the process of getting the data and
+* rendering tot the screen it will post catch error message to the console
+* as well as to the screen for the user can see.
+*/
+function errorMessage() {
+  //clearing the section element tag
+  sectionElement.innerHTML = '';
+  //styling the section elemetn tag
+  sectionElement.style.display = 'flex';
+  sectionElement.style.flexDirection = 'column';
+  sectionElement.style.alignItems = 'center';
+  sectionElement.style.marginTop = '30px';
+  //Creating the Image tag with some style
+  const errorImage = document.createElement('img');
+  errorImage.setAttribute('src', 'images/errorImage.jpg')
+  errorImage.style.width = '300px';
+  errorImage.style.height = '180px;'
+  errorImage.style.border = '1px solid black';
+  sectionElement.append(errorImage);
+  //Creating the error message to be appended to the screen
+  const errorh2 = document.createElement('h2');
+  errorh2.style.width = "200px";
+  errorh2.innerHTML = 'Sorry! It seems we do not have that cocktail. Try another search';
+  sectionElement.append(errorh2);
 }
 
 //displaying the items
