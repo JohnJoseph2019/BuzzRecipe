@@ -1,15 +1,18 @@
+//Creating Global variables for my API links
 const BASE_URL = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=';
 const RANDOM_URL = 'https://www.thecocktaildb.com/api/json/v1/1/random.php';
 
-//GLOBAL VARIABLES
+//GLOBAL VARIABLES to be used by all fucntions
 const searchButton = document.querySelector('#search');
 const answer = document.querySelector('#blank');
 const cocktailButton = document.querySelector('#cocktail-of-the-day');
-
-//Searching for the 'section' element
 const sectionElement = document.querySelector('SECTION');
 
-//Recevies the input and calls the searchDrink funtion on it
+/*BuzzRecipe
+* This is the start if my page basically here just retrieve the input
+* of the users search drink(word).
+* Here it will call another function and delete whatever has been search from the textbox
+*/
 function buzzRecipe() {
   let input = answer.value;
   searchDrink(input);
