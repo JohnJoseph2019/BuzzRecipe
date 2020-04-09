@@ -221,9 +221,13 @@ function displayList(array, title) {
   return unOrderList;
 }
 
-/*This function will display the Image 
- creates a Imgae element and adds all its properties to this element.
- then it returns it.
+/* displayImage(src, alt, drinkObject, classname = '')
+* This will create and IMG and add the image to it and return this element
+* if the image is for the result page, that image will have an eventlistener for click that will
+* display the info if chosen
+* params = src: source | alt: alt-text of the photo
+* params = dinkObject: this the object of the drink to make clickable image in certain cases
+params = classname: this is to add a classname for styling purposes if it meets the criteria
 */
 function displayImage(src, name, drinkObject, classname = '') {
   const imageSrc = document.createElement('IMG');
@@ -241,7 +245,11 @@ function displayImage(src, name, drinkObject, classname = '') {
   return imageSrc;
 }
 
-//Cocktail of the day function
+/* async function cocktail()
+* This async function will be use for the 'Random Buzz' button
+* this will call the API that produces a call of get and give us 
+* random drink from the database
+*/
 async function cocktail() {
   try {
     let cocktail = await axios.get(RANDOM_URL);
