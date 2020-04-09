@@ -86,7 +86,7 @@ This project is going to be a website/application where you can search your favo
 - Allow user to search for there drink.
 - Be able to randomonly suggest a cocktail to make.
 - Able to use flex to align the content correctly.
-- Be able to reset the search if the users chooses to.
+- Be able to add images
 
 ## PostMVP 
 
