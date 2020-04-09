@@ -140,7 +140,7 @@ URL: https://www.w3schools.com/howto/howto_css_shake_image.asp
 URL: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 */
 /* Portrait and Landscape */
-@media only screen 
+/* @media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px)
   and (-webkit-min-device-pixel-ratio: 3){ 
@@ -172,4 +172,34 @@ URL: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
       width: 200px;
     }
 
+} */
+
+@media (min-width: 375px) and (max-width: 812px){
+    body{
+      background-color: aquamarine;
+      text-align: center;
+    }
+    h1{
+      font-size: 2em;
+    }
+    #home-page-photo{
+      height: 175px;
+      width: 300px;
+    }
+    #blank{
+      font-size: 10px;
+    } 
+    #search{
+      margin-left: 3px;
+    }  
+    #cocktail-of-the-day{
+      margin-top: 8px;
+    }             
+    #section-div{
+      flex-direction: column;
+    }
+    .static-photo{
+      height: 200px;
+      width: 200px;
+    }    
 }
