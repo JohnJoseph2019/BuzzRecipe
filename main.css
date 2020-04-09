@@ -173,7 +173,7 @@ URL: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
     }
 
 } */
-
+/* This is for the Iphone X */
 @media (min-width: 375px) and (max-width: 812px){
     body{
       background-color: aquamarine;
