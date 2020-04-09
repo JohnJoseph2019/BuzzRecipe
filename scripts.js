@@ -23,7 +23,27 @@ async function searchDrink(name) {
     displaySearchResults(response.data.drinks);
   }
   catch (error) {
-    console.log(`This is the error: ${error}`)
+
+    //clearing the section element tag
+    sectionElement.innerHTML = '';
+    //styling the section elemetn tag
+    sectionElement.style.display = 'flex';
+    sectionElement.style.flexDirection = 'column';
+    sectionElement.style.alignItems = 'center';
+    sectionElement.style.marginTop = '20px';
+    //Creating the Image tag with some style
+    const errorImage = document.createElement('img');
+    errorImage.setAttribute('src', 'images/errorImage.jpg')
+    errorImage.style.width = '300px';
+    errorImage.style.height = '180px;'
+    errorImage.style.border = '1px solid black';
+    sectionElement.append(errorImage);
+    //Creating the error message to be appended to the screen
+    const errorh2 = document.createElement('h2');
+    errorh2.style.width = "200px";
+    errorh2.innerHTML = 'Sorry! It seems we do not have that cocktail. Try another search';
+    sectionElement.append(errorh2);
+    console.log(`${error}`)
   }
 }
 
@@ -33,7 +53,10 @@ function displaySearchResults(drinks) {
   fixHeaderview();
   //This will delete the previous search by deleting everything
   sectionElement.innerHTML = '';
-  sectionElement.setAttribute('class', 'section-search-result');
+  sectionElement.removeAttribute('style');
+
+  //sectionElement.setAttribute('class', 'section-search-result');
+  sectionElement.className = 'section-search-result';
 
   for (let i = 0; i < drinks.length; i++) {
     //Creating DIV for each resulted drink
@@ -101,11 +124,8 @@ function displayDrinkInfo(drink) {
   div.style.display = 'flex';
   div.style.alignItems = 'center';
   div.style.justifyContent = 'center';
-
-
   //Adding the image
   div.append(displayImage(drink.strDrinkThumb, drink.strDrink));
-
   //Here create arrays for the ingredient list and measurements
   const ingredientList = getIngredients(drink);
   const measurementList = getMeasurments(drink);
@@ -196,19 +216,12 @@ async function cocktail() {
 //Fix the body element to bring the content closer to the top Also alter h1 alittle to bring it closer to the top of the page
 function fixHeaderview() {
   const body = document.querySelector('BODY');
-  // body.style.marginTop = '0';
-  // body.style.padding = '0';
   console.log(body);
   const h1 = document.querySelector('H1');
   h1.style.margin = '0';
   const hideImage = document.querySelector('#home-page-photo');
   hideImage.style.display = 'none';
 }
-
-// function setStyleToResultDiv() {
-
-// }
-
-cocktailButton.addEventListener('click', cocktail)
+cocktailButton.addEventListener('click', cocktail);
 searchButton.addEventListener('click', buzzRecipe);
 
