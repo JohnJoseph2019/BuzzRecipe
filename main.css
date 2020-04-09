@@ -4,7 +4,6 @@ body{
   text-align: center;
   background-color: cornsilk;
   font-family: 'Lobster', cursive;
-  width: auto;
 }
 h1{
   font-family: 'Pacifico', cursive;
@@ -141,10 +140,10 @@ URL: https://www.w3schools.com/howto/howto_css_shake_image.asp
 URL: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
 */
 /* Portrait and Landscape */
-/* @media only screen 
+@media only screen 
   and (min-device-width: 375px) 
   and (max-device-width: 812px)
-  and (-webkit-min-device-pixel-ratio: 3) { 
+  and (-webkit-min-device-pixel-ratio: 3){ 
     body{
       background-color: aquamarine;
       text-align: center;
@@ -173,4 +172,4 @@ URL: https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
       width: 200px;
     }
 
-} */
+}
