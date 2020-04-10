@@ -64,8 +64,6 @@ input:focus::-webkit-input-placeholder {
   border-color: deeppink;
   transition: all 0.5s ease 0s;
   animation: shake 0.2s;
-  /* animation-iteration-count: infinite; */
-
 }
 
 #cocktail-of-the-day{
@@ -85,7 +83,6 @@ input:focus::-webkit-input-placeholder {
   border-color: deeppink;
   transition: all .5s ease 0s;
   animation: shake 0.2s;
-  /* animation-iteration-count: infinite; */
 }
 .imageResult{
   width: 200px;
