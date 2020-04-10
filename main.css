@@ -13,9 +13,7 @@ h1{
 }
 #home-page-photo{
   border: 1px solid black;
-  box-shadow:  3px 3px 30px 9px  #888888;
-  /* box-shadow: 10px 10px 5px 10px #888888; */
-  
+  box-shadow:  3px 3px 30px 9px  #888888; 
 }
 .section-search-result{
   display: flex;
@@ -125,6 +123,7 @@ h4{
 .static-photo{
   width: 350px;
   height: 375px;
+  box-shadow: -27px 19px 37px -3px #888888;
 }
 /* This is for the button to shake/buzz when hovering onver them 
 URL: https://www.w3schools.com/howto/howto_css_shake_image.asp
