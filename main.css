@@ -13,6 +13,9 @@ h1{
 }
 #home-page-photo{
   border: 1px solid black;
+  box-shadow:  3px 3px 30px 9px  #888888;
+  /* box-shadow: 10px 10px 5px 10px #888888; */
+  
 }
 .section-search-result{
   display: flex;
