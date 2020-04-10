@@ -235,6 +235,7 @@ function displayImage(src, name, drinkObject, classname = '') {
   imageSrc.setAttribute('src', src);
   imageSrc.setAttribute('alt', name);
   imageSrc.style.borderRadius = '4px';
+  imageSrc.style.border = '1px solid black';
   if (classname !== '') {
     imageSrc.setAttribute('class', classname);
     //Adding event listener to for this image
