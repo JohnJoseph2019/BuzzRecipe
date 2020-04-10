@@ -116,20 +116,21 @@ This project is a website/application where you can look up your favorite drink 
 
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| HTML Structure | L | 3hrs| 45min | N/A |
-| CSS Style - Basic | M | 3hrs| 45min | N/A |
-| DOM - Using Axios to acess to the API | H | 2hrs| 1hrs | N/A |
-| Javascript - Functions to get and manipulate the data to the console| H | 4hrs| 4hrs | N/A |
-| DOM - Search button to display the results of the search drink| H | 3hrs| 3hr | N/A |
-| DOM - Create a second button, select me, each result item| H | 3hrs| 2hr | N/A |
-| Javascript - Create functions for the result item selected | H | 3hrs| 2hr | N/A |
-| API/DOM - Append the ingredients/measurements of the chosen item| H | 3hrs| 3hr | N/A |
-| DOM - Add functonality to the cocktail of day button| H | 3hrs| 4hrs | N/A |
-| Javascript - display the cocktail of the day instructions| H | 3hrs| 4hrs | N/A |
-| CSS Styling - Home Page | H | 3hrs| 3hrs | N/A |
-| CSS Styling - Search Result| H | 3hrs| 3hrs | N/A |
-| CSS Styling - Drink Result | H | 3hrs| 3hrs | N/A |
-| CSS Styling - Button Design | H | 3hrs| 3hrs | N/A |
+| HTML Structure | L | 3hrs| 1hr | 1hr |
+| CSS Style - Basic | M | 3hrs| 1hr | 1hr |
+| DOM - Using Axios to acess to the API | H | 2hrs| 1hrs | 1hr |
+| Javascript - Functions to get and manipulate the data to the console| H | 4hrs| 4hrs | 4hr |
+| DOM - Search button to display the results of the search drink| H | 3hrs| 3hr | 3hr |
+| DOM - Create a second button, select me, each result item| H | 3hrs| 3hr | 3hr |
+| Javascript - Create functions for the result item selected | H | 3hrs| 3hr |3hr |
+| API/DOM - Append the ingredients/measurements of the chosen item| H | 3hrs| 3hr | 3hr |
+| DOM - Add functonality to the cocktail of day button| H | 3hrs| 4hrs | 4hr |
+| Javascript - display the cocktail of the day instructions| H | 3hrs| 4hrs | 4hr |
+| CSS Styling - Home Page | H | 3hrs| 3hrs | 3hr |
+| CSS Styling - Search Result| H | 3hrs| 3hrs | 3hr |
+| CSS Styling - Drink Result | H | 3hrs| 3hrs | 3hr |
+| CSS Styling - Button Design | H | 3hrs| 3hrs | 3hr|
+| Post-MVP | H | 3hrs| 3hrs | 3hr|
 | Total | H | 42hrs| 36.5hrs | N/A | 
 
 ## Code Snippet
