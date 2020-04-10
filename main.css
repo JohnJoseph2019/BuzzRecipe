@@ -15,6 +15,9 @@ h1{
   border: 1px solid black;
   box-shadow:  3px 3px 30px 9px  #888888; 
 }
+.search-section{
+  margin-top: 10px;
+}
 .section-search-result{
   display: flex;
   flex-wrap: wrap;
@@ -160,16 +163,20 @@ URL: https://www.w3schools.com/howto/howto_css_shake_image.asp
     } 
     #search{
       margin-left: 3px;
+      background-color: whitesmoke;    
+    }  
+    #search:hover{
       background-color: whitesmoke;
-      transition: none;
-      animation: none;      
+      color: black;    
     }  
     #cocktail-of-the-day{
       margin-top: 8px;
-      background-color: whitesmoke;
-      transition: none;
-      animation: none;      
-    }             
+      background-color: whitesmoke;      
+    }  
+    #cocktail-of-the-day:hover{
+      background-color: whitesmoke; 
+      color: black;     
+    }           
     #section-div{
       flex-direction: column;
     }
