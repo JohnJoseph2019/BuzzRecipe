@@ -6,7 +6,7 @@ Buzz recipe
 
 ## Project Description
 
-This project is going to be a website/application where you can search your favorite drinks and learn how to make it. Also if you are in the mood for a random drink the website can generate the cocktail of the day so that you can make something new.
+This project is a website/application where you can look up your favorite drink and get information on how to make it. You will get an image of the drink, a list of ingredients with measurements and instructions on how it should be made. I also have a button, called Buzz Random, which gives you a random drink for you to make for those who are undecided what to drink.
 
 ## API and Data Sample
 
@@ -99,7 +99,7 @@ This project is going to be a website/application where you can search your favo
 |  Day | Deliverable | Status
 |---|---| ---|
 |April 6th| Project Planning/Project Aproval - HTML and Basic CSS | Complete
-|April 7th| Finish up with HTML and Basic CSS | Incomplete
+|April 7th| Finish up with HTML and Basic CSS | 
 |April 8th| Coding of javascript/DOM to get and append data | Incomplete
 |April 9th| CSS Styling | Incomplete
 |April 10th| Presentation | Incomplete
