@@ -81,6 +81,7 @@ function displaySearchResults(drinks) {
     const divDrink = document.createElement('DIV');
     divDrink.style.display = 'flex';
     divDrink.style.flexDirection = 'column';
+    divDrink.style.alignItems = 'center';
 
     //create h3 tag for the title of the drink
     const name = document.createElement('h3');
@@ -273,8 +274,8 @@ function fixHeaderview() {
   const hideImage = document.querySelector('#home-page-photo');
   hideImage.style.display = 'none';
 }
-cocktailButton.addEventListener('click', cocktail);
 
+cocktailButton.addEventListener('click', cocktail);
 searchButton.addEventListener('click', buzzRecipe);
 //this event listener is add to the input tag which check if 'Enter' key was press then call buzzRecipe
 answer.addEventListener('keyup', function (event) {
