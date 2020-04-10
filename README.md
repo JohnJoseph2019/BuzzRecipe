@@ -138,6 +138,13 @@ This project is a website/application where you can look up your favorite drink 
 Use this section to include a brief code snippet of functionality that you are proud of an a brief description  
 
 ```
+#search:hover{
+  color: white;
+  background: deeppink;
+  border-color: deeppink;
+  transition: all 0.5s ease 0s;
+  animation: shake 0.5s;
+}
 .imageResult:hover{
   opacity: .5;
   animation: shake 0.3s;
@@ -145,6 +152,17 @@ Use this section to include a brief code snippet of functionality that you are p
 }
 
 @keyframes shake {
+  /* My Code */
+  0% { transform: rotate(0deg); }
+  20% { transform: rotate(-2deg); }
+  40% { transform: rotate(2deg); }
+  60% { transform: rotate(0deg); }
+  80% { transform: rotate(2deg); }
+  100% { transform: rotate(-2deg); }
+
+
+  /* URL: https://www.w3schools.com/howto/howto_css_shake_image.asp*/
+  /*
   0% { transform: translate(1px, 1px) rotate(0deg); }
   10% { transform: translate(-1px, -2px) rotate(-1deg); }
   20% { transform: translate(-3px, 0px) rotate(1deg); }
@@ -155,11 +173,9 @@ Use this section to include a brief code snippet of functionality that you are p
   70% { transform: translate(3px, 1px) rotate(-1deg); }
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
-  100% { transform: translate(1px, -2px) rotate(-1deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); } */
+
 }
-/* This is for the button to shake/buzz when hovering onver them 
-URL: https://www.w3schools.com/howto/howto_css_shake_image.asp
-*/
 
 ```
 
