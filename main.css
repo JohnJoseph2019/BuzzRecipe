@@ -55,7 +55,6 @@ input:focus::-webkit-input-placeholder {
   height: 25px;
   border-radius: 4px; 
   font-size: 15px;
-
   background: #ffffff;
   border: 1px solid #494949;
   transition: all 0.4s ease 0s;
@@ -90,7 +89,8 @@ input:focus::-webkit-input-placeholder {
 }
 .imageResult{
   width: 200px;
-  height: 200px; 
+  height: 200px;
+  box-shadow: -27px 19px 37px -3px #888888; 
 }
 .imageResult:hover{
   opacity: .5;

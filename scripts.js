@@ -245,6 +245,7 @@ function displayImage(src, name, drinkObject, classname = '') {
   } else {
     imageSrc.setAttribute('class', 'static-photo');
   }
+
   return imageSrc;
 }
 
@@ -278,7 +279,7 @@ function fixHeaderview() {
 
 cocktailButton.addEventListener('click', cocktail);
 searchButton.addEventListener('click', buzzRecipe);
-//this event listener is add to the input tag which check if 'Enter' key was press then call buzzRecipe
+//this event listener is to add the input tag which checks if 'Enter' key was press then call buzzRecipe
 answer.addEventListener('keyup', function (event) {
   if (event.keyCode === 13) {
     buzzRecipe();
