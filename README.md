@@ -90,19 +90,23 @@ This project is a website/application where you can look up your favorite drink 
 
 ## PostMVP 
 
+- Style button with effects 
+- Make the clickable images
+- Change the input text with some effects
 - Find a way using another API ( or not ) where users can find nearby bars as per user location.
 - Implement this with a list showing the user at all times their location. It will be display at the bottom right corner.
 - Able to implement a link to map version of it.
+
 
 ## Project Schedule
 
 |  Day | Deliverable | Status
 |---|---| ---|
 |April 6th| Project Planning/Project Aproval - HTML and Basic CSS | Complete
-|April 7th| Finish up with HTML and Basic CSS | 
-|April 8th| Coding of javascript/DOM to get and append data | Incomplete
-|April 9th| CSS Styling | Incomplete
-|April 10th| Presentation | Incomplete
+|April 7th| Finish up with HTML and Basic CSS | Complete
+|April 8th| Coding of javascript/DOM to get and append data | Complete
+|April 9th| CSS Styling | Complete
+|April 10th| Presentation | Complete
 
 ## Priority Matrix
 
