@@ -4,6 +4,8 @@
 
 Buzz recipe
 
+[Buzz Recipe Link](https://pages.git.generalassemb.ly/JuanDelz/BuzzRecipe/)
+
 ## Project Description
 
 This project is a website/application where you can look up your favorite drink and get information on how to make it. You will get an image of the drink, a list of ingredients with measurements and instructions on how it should be made. I also have a button, called Buzz Random, which gives you a random drink for you to make for those who are undecided what to drink.
