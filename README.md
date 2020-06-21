@@ -4,7 +4,7 @@
 
 Buzz recipe
 
-[Buzz Recipe Link](https://pages.git.generalassemb.ly/JuanDelz/BuzzRecipe/)
+[Buzz Recipe Link](https://johnjoseph2019.github.io/BuzzRecipe/)
 
 ## Project Description
 
